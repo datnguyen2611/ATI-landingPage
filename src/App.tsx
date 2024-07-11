@@ -9,7 +9,7 @@ function App() {
       theme={{
         token: {
           colorPrimary: "#018FE5",
-          fontFamily: '"Inter", sans-serif',
+          fontFamily: '"SF Pro", sans-serif',
           borderRadius: 8,
         },
         components: {

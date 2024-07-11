@@ -8,6 +8,7 @@ export default {
       colors: {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         secondary: "rgb(var(--color-bg-secondary) / <alpha-value>)",
+        bgFooter: "rgb(var(--color-bg-footer) / <alpha-value>)",
         main: "rgb(var(--color-bg-primary) / <alpha-value>)",
         gray1: "rgb(var(--color-border) / <alpha-value>)",
         darkGray: "#8E8F93",
@@ -25,6 +26,8 @@ export default {
           800: "#1D2939",
           900: "#101828",
           950: "#0C111D",
+          237: "#EDEDED",
+          249: "#F9FAFB",
         },
         warning: {
           25: "#FFFCF5",
@@ -53,7 +56,14 @@ export default {
       animation: {
         swing: "swing 1s infinite",
       },
-      borderColor: "red",
+      borderColor: {
+        blue: {
+          11: "#0B2B44",
+        },
+      },
+      fontFamily: {
+        "sf-pro": ["SF Pro", "sans-serif"],
+      },
     },
   },
   plugins: [],

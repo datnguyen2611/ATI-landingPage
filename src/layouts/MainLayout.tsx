@@ -5,7 +5,7 @@ import { Content } from "antd/es/layout/layout";
 import { Outlet } from "react-router-dom";
 const MainLayout = () => {
   return (
-    <Layout className="w-full h-screen">
+    <Layout className="w-full h-screen bg-white">
       <Navbar />
       <Content>
         <Outlet />

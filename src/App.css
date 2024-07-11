@@ -55,6 +55,7 @@ textarea {
 a {
   text-decoration: none;
   color: inherit;
+  font-family: "SF Pro", sans-serif;
 }
 
 ul[role="list"],
@@ -86,4 +87,29 @@ p {
   font-family: "SF Pro";
   src: url("./assets/fonts/sf-pro-regular.OTF") format("truetype");
   font-style: normal;
+}
+
+.custom-select {
+  border: none !important;
+  width: 100px;
+
+  box-shadow: none !important;
+  background-color: #8b4513; /* Custom background color */
+  color: white !important;
+  border-radius: 999px !important;
+}
+.custom-select .ant-select-selector {
+  background-color: transparent !important;
+  /* border: none !important; */
+  color: white !important;
+  border-radius: 999px !important;
+}
+
+.custom-dropdown {
+  border-radius: 0.5rem !important; /* Rounded corners for dropdown */
+}
+
+/* Adjust styles for dropdown arrow */
+.custom-select .ant-select-arrow {
+  color: white !important;
 }

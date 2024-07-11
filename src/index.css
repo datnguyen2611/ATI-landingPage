@@ -8,6 +8,7 @@
     --color-text-primary: 0 0 0;
     --color-bg-primary: 255 255 255;
     --color-bg-secondary: 250 250 250;
+    --color-bg-footer: 249 250 251;
     --color-border: 234 236 240;
   }
 
@@ -16,6 +17,7 @@
     --color-text-primary: 255 255 255;
     --color-bg-primary: 26 28 32;
     --color-bg-secondary: 30 31 37;
+    --color-bg-footer: 249 250 251;
     --color-border: 38 41 46;
   }
 }

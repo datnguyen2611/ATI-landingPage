@@ -50,7 +50,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black py-5 px-12  w-full z-100 absolute left-0 top-0 flex justify-between items-center">
+    <div className="bg-transparent py-5 px-12  w-full z-10 absolute left-0 top-0 flex justify-between items-center">
       <div className="text-lg font-bold flex items-center space-x-2">
         <img
           src="/logo/logo.png"
@@ -85,8 +85,8 @@ const Navbar = () => {
                 >
                   <div className="flex items-center space-x-1">
                     <img
-                      src="/vn-flag.png"
-                      alt="VN"
+                      src={`/${e.value}-flag.png`}
+                      alt={e.value}
                       className="w-4 h-4 rounded-full"
                     />
                     <span className="font-medium">{e.label}</span>

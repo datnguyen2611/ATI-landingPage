@@ -9,6 +9,8 @@ import { Page } from "@/types/index.ts";
 import Home from "@/pages/Home.tsx";
 import { Toaster } from "sonner";
 import About from "./pages/About.tsx";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const router = createBrowserRouter([
   {

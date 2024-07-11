@@ -2,6 +2,7 @@ import { ConfigProvider } from "antd";
 import locale from "antd/locale/vi_VN";
 import { Outlet } from "react-router-dom";
 import "./App.css";
+
 function App() {
   return (
     <ConfigProvider

@@ -178,3 +178,56 @@ p {
   color: #ffffff;
   opacity: 1;
 }
+
+.gradient-blue {
+  background: -webkit-linear-gradient(180deg, #018fe5 0%, #014f7f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-green {
+  background: -webkit-linear-gradient(
+    146.98deg,
+    #e6f4fc -14.53%,
+    #4ea83d 26.19%,
+    #4ea83d 68.81%,
+    #e6f4fc 112.71%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-orange {
+  background: -webkit-linear-gradient(
+    146.98deg,
+    #e6f4fc -14.53%,
+    #e56e01 26.19%,
+    #e56e01 68.81%,
+    #e6f4fc 112.71%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-red {
+  background: -webkit-linear-gradient(
+    146.98deg,
+    #e6f4fc -14.53%,
+    #ff5f56 26.19%,
+    #ff5f56 68.81%,
+    #e6f4fc 112.71%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background-dots::after {
+  content: "";
+  background-image: url("/dots-background.png");
+  background-position: right;
+  background-size: contain;
+  top: -16px;
+  left: -56px;
+  width: 184px;
+  height: 312px;
+  z-index: 9;
+  position: absolute;
+}

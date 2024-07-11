@@ -1,5 +1,5 @@
 // BrandCarousel.tsx
-import React, { useRef } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 const BrandCarousel: React.FC = () => {
@@ -8,10 +8,10 @@ const BrandCarousel: React.FC = () => {
     arrows: false,
     infinite: true,
     loop: true,
-    speed: 1500,
+    speed: 1000,
     autoplay: true,
     focusOnSelect: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     centerMode: false,
     slidesToShow: 10,
     slidesToScroll: 1,
@@ -36,10 +36,10 @@ const BrandCarousel: React.FC = () => {
     arrows: false,
     infinite: true,
     loop: true,
-    speed: 1500,
+    speed: 1000,
     autoplay: true,
     focusOnSelect: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2900,
     centerMode: true,
     slidesToShow: 9,
     slidesToScroll: 1,

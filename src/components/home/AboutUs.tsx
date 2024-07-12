@@ -1,5 +1,5 @@
 import LightningIcon from "@/assets/icons/LightningIcon";
-import { Button, Card, Statistic, Tabs, TabsProps } from "antd";
+import { Button, Card, Tabs, TabsProps } from "antd";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
@@ -64,8 +64,8 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center  p-4">
-      <div className=" rounded-lg  max-w-screen-xl  mx-auto relative background-dots">
+    <div className=" mt-10 ">
+      <div className=" rounded-lg  relative background-dots">
         <div className="flex flex-col lg:flex-row ">
           <div className="lg:w-1/2 z-10">
             <img

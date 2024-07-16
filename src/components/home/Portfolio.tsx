@@ -193,7 +193,7 @@ const Portfolio = () => {
               key={category.value}
               onClick={() => setSelectedCategory(category.value)}
               className={cn(
-                "px-6 py-1.5 rounded-lg font-normal text-xl",
+                "px-6 py-1.5 rounded-lg font-normal text-xl border-none",
                 selectedCategory === category.value
                   ? "bg-primary text-white"
                   : "bg-gray-47 text-gray-600",

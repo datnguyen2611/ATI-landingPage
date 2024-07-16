@@ -194,6 +194,31 @@ p {
     #e6f4fc 112.71%
   ) !important;
 }
+
+.gradient-blue-2 {
+  background: linear-gradient(
+    146.98deg,
+    #e6f4fc -14.53%,
+    #018fe5 26.19%,
+    #018fe5 68.81%,
+    #e6f4fc 112.71%
+  );
+}
+
+.text-gradient-blue {
+  background: -webkit-linear-gradient(
+    146.98deg,
+    #e6f4fc -14.53%,
+    #018fe5 26.19%,
+    #018fe5 68.81%,
+    #e6f4fc 112.71%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+}
+
 .gradient-green {
   background: -webkit-linear-gradient(
     146.98deg,
@@ -301,4 +326,11 @@ p {
 }
 .custom-tab-bar .ant-tabs-ink-bar {
   display: none;
+}
+
+.img-hover img {
+  transition: transform 0.5s ease;
+}
+.img-hover:hover img {
+  transform: scale(1.5);
 }

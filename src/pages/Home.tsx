@@ -2,6 +2,7 @@ import AboutUs from "@/components/home/AboutUs";
 import Banner from "@/components/home/Banner";
 import BrandCarousel from "@/components/home/BrandCarousel";
 import BusinessArea from "@/components/home/BusinessArea";
+import Portfolio from "@/components/home/Portfolio";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
           <AboutUs />
         </div>
 
-        <div className="">
+        <div className="business-container">
           <div className=" text-center">
             <h2 className="text-primary mb-5 font-bold text-5xl">
               Business areas
@@ -31,6 +32,19 @@ const Home = () => {
             </p>
           </div>
           <BusinessArea />
+        </div>
+
+        <div className="portfolio-container my-10">
+          <div className=" text-center mb-10">
+            <h2 className="text-primary mb-5 font-bold text-5xl">
+              Our portfolio
+            </h2>
+            <p className="w-1/3 mx-auto text-gray-600 text-opacity-60">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the. It was popularised in the
+            </p>
+          </div>
+          <Portfolio />
         </div>
       </div>
     </div>

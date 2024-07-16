@@ -2,6 +2,7 @@ import { Button, Col, Row, Space } from "antd";
 import { useState } from "react";
 import ArticleCard from "../card/ArticleCard";
 import { cn } from "@/lib/utils";
+import { TagColors, tagItems } from "@/types";
 
 interface Article {
   title: string;
@@ -9,7 +10,7 @@ interface Article {
   date: string;
   description: string;
   image: string;
-  tags: string[];
+  tags: tagItems[];
 }
 
 const allArticles: Article[] = [
@@ -20,7 +21,23 @@ const allArticles: Article[] = [
     description:
       "We are thrilled to share the exciting news that Seers Digital has been chosen as a finalist in the Digital Tr...",
     image: "card-1.png",
-    tags: ["New", "Leadership", "News"],
+    tags: [
+      {
+        value: "new",
+        type: "New",
+        color: TagColors.purple,
+      },
+      {
+        value: "leadership",
+        type: "Leadership",
+        color: TagColors.blue,
+      },
+      {
+        value: "news",
+        type: "News",
+        color: TagColors.magenta,
+      },
+    ],
   },
   {
     title: "The IT Skills Dilemma: A Growing Crisis",
@@ -29,7 +46,23 @@ const allArticles: Article[] = [
     description:
       "In today's ever-evolving technological landscape, organizations are racing to keep up with the latest ad...",
     image: "card-2.png",
-    tags: ["New", "Leadership", "News"],
+    tags: [
+      {
+        value: "new",
+        type: "New",
+        color: TagColors.purple,
+      },
+      {
+        value: "leadership",
+        type: "Leadership",
+        color: TagColors.blue,
+      },
+      {
+        value: "news",
+        type: "News",
+        color: TagColors.magenta,
+      },
+    ],
   },
   {
     title: "Seers Digital, Finalist in the ARN Innovation Awards 2023",
@@ -38,7 +71,23 @@ const allArticles: Article[] = [
     description:
       "We are thrilled to share the exciting news that Seers Digital has been chosen as a finalist in the Digital Tr...",
     image: "card-3.png",
-    tags: ["New", "Leadership", "News"],
+    tags: [
+      {
+        value: "new",
+        type: "New",
+        color: TagColors.purple,
+      },
+      {
+        value: "leadership",
+        type: "Leadership",
+        color: TagColors.blue,
+      },
+      {
+        value: "news",
+        type: "News",
+        color: TagColors.magenta,
+      },
+    ],
   },
   {
     title: "The IT Skills Dilemma: A Growing Crisis",
@@ -47,7 +96,23 @@ const allArticles: Article[] = [
     description:
       "In today's ever-evolving technological landscape, organizations are racing to keep up with the latest ad...",
     image: "card-4.png",
-    tags: ["New", "Leadership", "News"],
+    tags: [
+      {
+        value: "new",
+        type: "New",
+        color: TagColors.purple,
+      },
+      {
+        value: "leadership",
+        type: "Leadership",
+        color: TagColors.blue,
+      },
+      {
+        value: "news",
+        type: "News",
+        color: TagColors.magenta,
+      },
+    ],
   },
   {
     title: "Seers Digital, Finalist in the ARN Innovation Awards 2023",
@@ -56,7 +121,23 @@ const allArticles: Article[] = [
     description:
       "We are thrilled to share the exciting news that Seers Digital has been chosen as a finalist in the Digital Tr...",
     image: "card-5.png",
-    tags: ["New", "Leadership", "News"],
+    tags: [
+      {
+        value: "new",
+        type: "New",
+        color: TagColors.purple,
+      },
+      {
+        value: "leadership",
+        type: "Leadership",
+        color: TagColors.blue,
+      },
+      {
+        value: "news",
+        type: "News",
+        color: TagColors.magenta,
+      },
+    ],
   },
   {
     title: "The IT Skills Dilemma: A Growing Crisis",
@@ -65,17 +146,33 @@ const allArticles: Article[] = [
     description:
       "In today's ever-evolving technological landscape, organizations are racing to keep up with the latest ad...",
     image: "card-6.png",
-    tags: ["New", "Leadership", "News"],
+    tags: [
+      {
+        value: "new",
+        type: "New",
+        color: TagColors.purple,
+      },
+      {
+        value: "leadership",
+        type: "Leadership",
+        color: TagColors.blue,
+      },
+      {
+        value: "news",
+        type: "News",
+        color: TagColors.magenta,
+      },
+    ],
   },
   // Add more articles here
 ];
 
 const categories = [
   { value: "all", label: "All" },
-  { value: "Mobile Application", label: "Mobile Application" },
-  { value: "Web Development", label: "Web Development" },
-  { value: "Blockchain", label: "Blockchain" },
-  { value: "Artificial Intelligence", label: "Artificial Intelligence" },
+  { value: "mobile", label: "Mobile Application" },
+  { value: "web", label: "Web Development" },
+  { value: "blockchain", label: "Blockchain" },
+  { value: "artificial", label: "Artificial Intelligence" },
 ];
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -84,7 +181,7 @@ const Portfolio = () => {
     selectedCategory === "all"
       ? allArticles
       : allArticles.filter((article) =>
-          article.tags.includes(selectedCategory),
+          article.tags.some((e) => e.value === selectedCategory),
         );
 
   return (

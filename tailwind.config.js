@@ -70,6 +70,9 @@ export default {
       fontFamily: {
         "sf-pro": ["SF Pro", "sans-serif"],
       },
+      lineHeight: {
+        15: "3.5rem",
+      },
     },
   },
   plugins: [],

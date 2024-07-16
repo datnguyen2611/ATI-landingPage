@@ -184,6 +184,16 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.gradient-blue-1 {
+  background: linear-gradient(
+    146.98deg,
+    #e6f4fc -14.53%,
+    #018fe5 26.19%,
+    #018fe5 68.81%,
+    #e6f4fc 112.71%
+  ) !important;
+}
 .gradient-green {
   background: -webkit-linear-gradient(
     146.98deg,
@@ -195,6 +205,12 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.gradient-green-1 {
+  background: -webkit-linear-gradient(291.83deg, #b5d702 49.8%, #d2e764 96.07%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-orange {
   background: -webkit-linear-gradient(
     146.98deg,
@@ -286,4 +302,3 @@ p {
 .custom-tab-bar .ant-tabs-ink-bar {
   display: none;
 }
-/* custom tabs bar */

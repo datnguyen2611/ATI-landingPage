@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Tag, Space } from "antd";
+import { tagItems } from "@/types";
 
 interface ArticleCardProps {
   title: string;
@@ -7,7 +8,7 @@ interface ArticleCardProps {
   date: string;
   description: string;
   image: string;
-  tags: string[];
+  tags: tagItems[];
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
@@ -49,9 +50,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           {tags.map((tag, index) => (
             <Tag
               key={index}
-              color="blue"
+              color={tag.color}
             >
-              {tag}
+              {tag.type}
             </Tag>
           ))}
         </Space>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className=" relative w-full  bg-gray-249 overflow-hidden ">
+    <footer className=" relative w-full  bg-gray-249 overflow-hidden max-sm:px-2 ">
       <div className="container mx-auto  py-20">
         <Row
           gutter={[16, 16]}

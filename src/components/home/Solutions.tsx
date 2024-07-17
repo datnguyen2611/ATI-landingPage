@@ -43,7 +43,10 @@ const items: Item[] = [
 
 const Solutions = () => {
   return (
-    <Row gutter={[16, 16]}>
+    <Row
+      gutter={[16, 16]}
+      className="max-sm:px-2"
+    >
       {items.map((item, index) => (
         <Col
           xs={12}

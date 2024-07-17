@@ -2,7 +2,10 @@ import { Card, Col, Row } from "antd";
 
 const Ecosystem = () => {
   return (
-    <Row gutter={[16, 16]}>
+    <Row
+      gutter={[16, 16]}
+      className="max-sm:px-2"
+    >
       <Col
         xs={24}
         md={12}

@@ -10,7 +10,7 @@ import WhatdoWeDo from "@/components/home/WhatdoWeDo";
 
 const Home = () => {
   return (
-    <div className="w-full h-full relative bg-white">
+    <div className="w-full h-full relative bg-white overflow-hidden">
       <Banner />
       <BrandCarousel />
       <div className="max-w-screen-xl  mx-auto">

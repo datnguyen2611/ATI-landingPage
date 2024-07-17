@@ -19,8 +19,9 @@ const NavbarItem: React.FC<SidebarItemProps> = ({
     <Link
       to={href}
       className={cn(
-        "flex w-full flex-col items-center px-6 py-1  text-center text-nowrap text-white rounded-xl fon",
-        isActive && "bg-white  hover:bg-opacity-[0.1] bg-opacity-[0.1]",
+        "flex w-full flex-col items-center px-6 py-4 sm:px-6 sm:py-1 text-center text-nowrap text-black-0 sm:text-white rounded-xl ",
+        isActive &&
+          "bg-black-0 bg-opacity-[0.1]  sm:hover:bg-opacity-[0.1] sm:bg-opacity-[0.1] sm:bg-white",
       )}
     >
       {label}

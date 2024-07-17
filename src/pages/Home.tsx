@@ -7,7 +7,6 @@ import Life from "@/components/home/Life";
 import Portfolio from "@/components/home/Portfolio";
 import Solutions from "@/components/home/Solutions";
 import WhatdoWeDo from "@/components/home/WhatdoWeDo";
-import WorldMap from "@/components/home/WorldMap";
 
 const Home = () => {
   return (
@@ -15,10 +14,12 @@ const Home = () => {
       <Banner />
       <BrandCarousel />
       <div className="max-w-screen-xl  mx-auto">
-        <div className="my-10">
+        <div className="sm:my-10 my-5">
           <div className=" text-center">
-            <h2 className="text-primary mb-5 font-bold text-5xl">About Us</h2>
-            <p className="w-1/3 mx-auto text-gray-600 text-opacity-60">
+            <h2 className="text-primary sm:mb-5 mb-2 font-bold sm:text-5xl  text-3xl">
+              About Us
+            </h2>
+            <p className="sm:w-1/3 w-11/12 mx-auto text-gray-600 text-opacity-60">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the. It was popularised in the{" "}
             </p>
@@ -28,10 +29,10 @@ const Home = () => {
 
         <div className="business-container">
           <div className=" text-center">
-            <h2 className="text-primary mb-5 font-bold text-5xl">
+            <h2 className="text-primary sm:mb-5 mb-2 font-bold sm:text-5xl  text-3xl">
               Business areas
             </h2>
-            <p className="w-1/3 mx-auto text-gray-600 text-opacity-60">
+            <p className="sm:w-1/3 w-11/12 mx-auto text-gray-600 text-opacity-60">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the. It was popularised in the
             </p>
@@ -41,10 +42,10 @@ const Home = () => {
 
         <div className="portfolio-container my-20">
           <div className=" text-center mb-10">
-            <h2 className="text-primary mb-5 font-bold text-5xl">
+            <h2 className="text-primary sm:mb-5 mb-2 font-bold sm:text-5xl  text-3xl">
               Our portfolio
             </h2>
-            <p className="w-1/3 mx-auto text-gray-600 text-opacity-60">
+            <p className="sm:w-1/3 w-11/12 mx-auto text-gray-600 text-opacity-60">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the. It was popularised in the
             </p>
@@ -53,7 +54,7 @@ const Home = () => {
         </div>
         <div>
           <div className=" text-center mb-10">
-            <h2 className="text-primary mb-5 font-bold text-5xl">
+            <h2 className="text-primary sm:mb-5 mb-2 font-bold sm:text-5xl  text-3xl">
               ATI Ecosystem
             </h2>
           </div>
@@ -61,10 +62,10 @@ const Home = () => {
         </div>
         <div className="container my-20">
           <div className=" text-center mb-10">
-            <h2 className="text-primary mb-5 font-bold text-5xl">
+            <h2 className="text-primary sm:mb-5 mb-2 font-bold sm:text-5xl  text-3xl">
               What do we do
             </h2>
-            <p className="w-1/3 mx-auto text-gray-600 text-opacity-60">
+            <p className="sm:w-1/3 w-11/12 mx-auto text-gray-600 text-opacity-60">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the. It was popularised in the
             </p>
@@ -74,10 +75,10 @@ const Home = () => {
 
         <div className="container mt-20">
           <div className=" text-center mb-10">
-            <h2 className="text-primary mb-5 font-bold text-5xl">
+            <h2 className="text-primary sm:mb-5 mb-2 font-bold sm:text-5xl  text-3xl">
               Tailor-made solutions for focused industries
             </h2>
-            <p className="w-1/3 mx-auto text-gray-600 text-opacity-60">
+            <p className="sm:w-1/3 w-11/12 mx-auto text-gray-600 text-opacity-60">
               We're here for those that struggle with industry specialization in
               Digital Transformation
             </p>
@@ -97,7 +98,9 @@ const Home = () => {
 
         <div className="containevr my-20">
           <div className=" text-center mb-10">
-            <h2 className="text-primary mb-5 font-bold text-5xl">ATI Life</h2>
+            <h2 className="text-primary sm:mb-5 mb-2 font-bold sm:text-5xl  text-3xl">
+              ATI Life
+            </h2>
           </div>
 
           <Life />

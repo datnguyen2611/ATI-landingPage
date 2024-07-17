@@ -28,7 +28,7 @@ const Life: React.FC = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} w-10 h-10 z-10 right-5`}
+        className={`${className} hidden sm:block w-10 h-10 z-10 right-5`}
         style={style}
         onClick={onClick}
       >
@@ -41,7 +41,7 @@ const Life: React.FC = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} w-10 h-10 z-10 left-5`}
+        className={`${className} hidden sm:block w-10 h-10 z-10 left-5`}
         style={style}
         onClick={onClick}
       >

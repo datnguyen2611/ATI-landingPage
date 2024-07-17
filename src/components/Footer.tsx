@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <Col
-            xs={24}
+            xs={12}
             md={4}
           >
             <h3 className="text-gray-800 font-semibold">Company</h3>
@@ -113,7 +113,7 @@ const Footer = () => {
 
           {/* Legal Links */}
           <Col
-            xs={24}
+            xs={12}
             md={4}
           >
             <h3 className="text-gray-800 font-semibold">Legal</h3>

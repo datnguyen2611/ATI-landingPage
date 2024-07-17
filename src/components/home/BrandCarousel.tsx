@@ -19,13 +19,13 @@ const BrandCarousel: React.FC = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 6,
         },
       },
       {
         breakpoint: 425,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 4,
         },
       },
     ],
@@ -41,14 +41,20 @@ const BrandCarousel: React.FC = () => {
     focusOnSelect: true,
     autoplaySpeed: 2900,
     centerMode: true,
-    slidesToShow: 9,
+    slidesToShow: 10,
     slidesToScroll: 1,
     rtl: true,
     responsive: [
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
         breakpoint: 425,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
         },
       },
     ],
@@ -63,7 +69,7 @@ const BrandCarousel: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <Slider
         {...mainSettings}
         className="my-5"

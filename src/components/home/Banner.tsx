@@ -70,13 +70,15 @@ const Banner = () => {
                   backgroundImage: `url(/banner/${slide.imageUrl})`,
                 }}
               >
-                <div className=" text-white  bg-opacity-50  max-w-[865px]  z-10 left-0  w-full flex  justify-end">
-                  <div className="w-[689px] ">
-                    <h2 className="text-6xl font-bold mb-6 ">{slide.text}</h2>
-                    <p className="text-xl mb-6 text-white text-opacity-60 w-10/12">
+                <div className=" text-white  bg-opacity-50  sm:max-w-[865px]  max-w-full z-10 left-0  w-full flex  justify-end max-sm:p-3">
+                  <div className="sm:w-[689px] w-full ">
+                    <h2 className="sm:text-6xl text-4xl font-bold mb-6 ">
+                      {slide.text}
+                    </h2>
+                    <p className="sm:text-xl text-base mb-6 text-white text-opacity-60 w-10/12">
                       {slide.description}
                     </p>
-                    <button className="bg-primary text-white py-4 px-10 rounded-full text-lg font-medium">
+                    <button className="bg-primary text-white sm:py-4 sm:px-10 py-2  px-5 rounded-full sm:text-lg text-base font-medium">
                       {slide.buttonText}
                     </button>
                   </div>

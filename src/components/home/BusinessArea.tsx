@@ -67,10 +67,10 @@ const BusinessArea = () => {
     content[activeTab] || content["1"];
 
   return (
-    <div className="flex mt-10">
+    <div className="flex mt-10 sm:flex-row flex-col">
       <Tabs
         tabPosition="left"
-        className=" business-tabs justify-end"
+        className=" business-tabs sm:justify-end justify-center"
         defaultActiveKey="1"
         onChange={handleTabChange}
         destroyInactiveTabPane={true}
@@ -93,7 +93,7 @@ const BusinessArea = () => {
           />
         ))}
       </Tabs>
-      <div className=" w-full ml-6 border border-gray-300 rounded-2xl">
+      <div className=" w-full ml-0 mt-4 border border-gray-300 rounded-2xl sm:ml-6 sm:mt-0">
         {imageUrl && (
           <img
             src={`/banner/${imageUrl}`}

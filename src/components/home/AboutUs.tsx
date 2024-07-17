@@ -14,7 +14,7 @@ const AboutUs = () => {
       key: "1",
       label: "Our Mission",
       children: (
-        <div className="text-gray-600 text-lg font-medium">
+        <div className="text-gray-600 sm:text-lg text-sm font-medium">
           <p className="mb-4">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the. It was popularised in the Lorem
@@ -64,7 +64,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className=" mt-10 ">
+    <div className=" mt-10 px-3 sm:px-0">
       <div className=" rounded-lg  relative background-dots">
         <div className="flex flex-col lg:flex-row ">
           <div className="lg:w-1/2 z-10">
@@ -74,11 +74,11 @@ const AboutUs = () => {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="p-6 lg:w-1/2">
-            <h1 className="text-5xl font-bold mb-4 text-black-47 ">
+          <div className="sm:p-6 p-2 lg:w-1/2">
+            <h1 className="sm:text-5xl text-3xl font-bold mb-4 text-black-47 ">
               Powerful agency for corporate business
             </h1>
-            <p className="text-gray-600 mb-4 text-base font-medium">
+            <p className="text-gray-600 mb-4 sm:text-base text-sm font-medium">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since.
@@ -89,12 +89,12 @@ const AboutUs = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:py-10 py-5 ">
           <Card
             ref={ref1}
             className="text-center border-gray-300"
           >
-            <h2 className="text-[56px] mb-2 font-bold gradient-blue">
+            <h2 className="sm:text-[56px] text-4xl mb-2 font-bold gradient-blue">
               {inView1 ? (
                 <CountUp
                   end={12}
@@ -113,7 +113,7 @@ const AboutUs = () => {
             ref={ref2}
             className="text-center border-gray-300"
           >
-            <h2 className="text-[56px] mb-2 font-bold gradient-green">
+            <h2 className="sm:text-[56px] text-4xl mb-2 font-bold gradient-green">
               {inView2 ? (
                 <>
                   <CountUp
@@ -132,7 +132,7 @@ const AboutUs = () => {
             ref={ref3}
             className="text-center border-gray-300"
           >
-            <h2 className="text-[56px] mb-2 font-bold gradient-orange">
+            <h2 className="sm:text-[56px] text-4xl mb-2 font-bold gradient-orange">
               {inView3 ? (
                 <>
                   0
@@ -151,7 +151,7 @@ const AboutUs = () => {
             ref={ref4}
             className="text-center border-gray-300"
           >
-            <h2 className="text-[56px] mb-2 font-bold gradient-red">
+            <h2 className="sm:text-[56px] text-4xl mb-2 font-bold gradient-red">
               {inView4 ? (
                 <>
                   {" "}

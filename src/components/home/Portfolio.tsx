@@ -185,24 +185,22 @@ const Portfolio = () => {
         );
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-center items-center gap-4 mb-4">
-        <Space>
-          {categories.map((category) => (
-            <Button
-              key={category.value}
-              onClick={() => setSelectedCategory(category.value)}
-              className={cn(
-                "px-6 py-1.5 rounded-lg font-normal text-xl border-none",
-                selectedCategory === category.value
-                  ? "bg-primary text-white"
-                  : "bg-gray-47 text-gray-600",
-              )}
-            >
-              {category.label}
-            </Button>
-          ))}
-        </Space>
+    <div className="container mx-auto p-4 ">
+      <div className="flex justify-center items-center gap-4 mb-4 max-sm:flex-wrap  max-sm:justify-start">
+        {categories.map((category) => (
+          <Button
+            key={category.value}
+            onClick={() => setSelectedCategory(category.value)}
+            className={cn(
+              "px-6 py-1.5 rounded-lg font-normal text-xl border-none",
+              selectedCategory === category.value
+                ? "bg-primary text-white"
+                : "bg-gray-47 text-gray-600",
+            )}
+          >
+            {category.label}
+          </Button>
+        ))}
       </div>
       <Row gutter={[16, 16]}>
         {filteredArticles.map((article, index) => (

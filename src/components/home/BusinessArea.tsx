@@ -85,7 +85,7 @@ const BusinessArea = () => {
         {Object.keys(content).map((key) => (
           <TabPane
             tab={
-              <div className="text-left  text-2xl font-medium">
+              <div className="text-left  sm:text-2xl text-lg font-medium">
                 <span>{content[key].title}</span>
               </div>
             }

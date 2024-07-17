@@ -1,42 +1,56 @@
-import { InfoCircleOutlined } from "@ant-design/icons";
-import { Tooltip } from "antd";
+// src/components/WorldMap.tsx
 import React from "react";
-import { ComposableMap, Geographies, Geography, Line } from "react-simple-maps";
-
-const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Line,
+  Marker,
+} from "react-simple-maps";
+import * as d3 from "d3-geo";
+import worldData from "@/world-110m.json"; // Import tệp JSON cục bộ
 
 const connections = [
   { from: "Vietnam", to: "United States" },
-  { from: "Vietnam", to: "Canada" },
-  { from: "Vietnam", to: "Switzerland" },
+  { from: "Vietnam", to: "Japan" },
+  { from: "Vietnam", to: "Thailand" },
+  { from: "Vietnam", to: "Singapore" },
+  { from: "Vietnam", to: "Australia" },
   // Add other connections as needed
 ];
 
+const coordinates: { [key: string]: [number, number] } = {
+  Vietnam: [108.2772, 14.0583],
+  "United States": [-95.7129, 37.0902],
+  Japan: [138.2529, 36.2048],
+  Thailand: [100.9925, 15.87],
+  Singapore: [103.8198, 1.3521],
+  Australia: [133.7751, -25.2744],
+  // Add other coordinates as needed
+};
+
 const WorldMap: React.FC = () => {
-  const coordinates: { [key: string]: [number, number] } = {
-    Vietnam: [108.2772, 14.0583],
-    "United States": [-95.7129, 37.0902],
-    Canada: [-106.3468, 56.1304],
-    Switzerland: [8.2275, 46.8182],
-    // Add other coordinates as needed
-  };
+  // Tạo projection với d3-geo
+  const projection = d3
+    .geoEqualEarth()
+    .scale(160)
+    .translate([800 / 2, 450 / 2]);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="map-container">
       <ComposableMap
-        projection="geoEqualEarth"
-        width={800}
-        height={450}
+        projection={projection as any} // Sử dụng `as any` để bỏ qua kiểm tra loại của TypeScript
+        height={500}
+        style={{ width: "100%" }}
       >
-        <Geographies geography={geoUrl}>
+        <Geographies geography={worldData}>
           {({ geographies }) =>
             geographies.map((geo) => (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill="#DDD"
-                stroke="#FFF"
+                fill="#E0E0E0"
+                stroke="#FFFFFF"
               />
             ))
           }
@@ -45,37 +59,45 @@ const WorldMap: React.FC = () => {
           const from = coordinates[connection.from];
           const to = coordinates[connection.to];
 
+          if (!from || !to) {
+            return null; // Bỏ qua nếu không tìm thấy tọa độ
+          }
+
           return (
             <Line
               key={i}
               from={from}
               to={to}
-              stroke="#FF5533"
-              strokeWidth={2}
+              stroke="#018FE5"
+              strokeWidth={1}
               strokeLinecap="round"
-              className="animated-line"
+              strokeDasharray="3" // Đây là dòng thêm vào để tạo dashline
             />
           );
         })}
-        {Object.keys(coordinates).map((country, i) => {
-          const [longitude, latitude] = coordinates[country];
-          return (
+        {Object.entries(coordinates).map(([country, coords], i) => (
+          <Marker
+            key={i}
+            coordinates={coords}
+          >
             <circle
-              key={i}
-              cx={longitude}
-              cy={latitude}
-              r={4}
-              fill="#FF5533"
+              r={2}
+              fill="#018FE5"
+              className="animate-ping"
+            />
+            <text
+              textAnchor="right"
+              y={10}
+              style={{
+                fontFamily: "system-ui",
+                fill: "#018FE5",
+                fontSize: "10px",
+              }}
             >
-              <Tooltip
-                title={country}
-                placement="top"
-              >
-                <InfoCircleOutlined />
-              </Tooltip>
-            </circle>
-          );
-        })}
+              {country}
+            </text>
+          </Marker>
+        ))}
       </ComposableMap>
     </div>
   );

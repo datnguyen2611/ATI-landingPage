@@ -27,18 +27,18 @@ const RightIcon: React.FC<SVGLogoProps> = ({ width = 16, height = 16 }) => {
           y2="14.1218"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E6F4FC" />
+          <stop stopColor="#E6F4FC" />
           <stop
             offset="0.32"
-            stop-color="#018FE5"
+            stopColor="#018FE5"
           />
           <stop
             offset="0.655"
-            stop-color="#018FE5"
+            stopColor="#018FE5"
           />
           <stop
             offset="1"
-            stop-color="#E6F4FC"
+            stopColor="#E6F4FC"
           />
         </linearGradient>
       </defs>

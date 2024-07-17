@@ -34,6 +34,7 @@ export default {
         black: {
           47: "#101828",
           20: "#202020",
+          0: "#000000",
         },
         warning: {
           25: "#FFFCF5",

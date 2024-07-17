@@ -62,7 +62,7 @@ const Banner = () => {
       <div className="relative w-full h-full overflow-hidden">
         <Slider {...settings}>
           {slides.map((slide, index) => (
-            <div>
+            <div key={index}>
               <div
                 key={index}
                 className="relative w-full h-screen text-left overflow-hidden    bg-cover bg-center flex items-center ellipse-banner "

@@ -3,6 +3,7 @@ import Banner from "@/components/home/Banner";
 import BrandCarousel from "@/components/home/BrandCarousel";
 import BusinessArea from "@/components/home/BusinessArea";
 import Ecosystem from "@/components/home/Ecosystem";
+import Life from "@/components/home/Life";
 import Portfolio from "@/components/home/Portfolio";
 import Solutions from "@/components/home/Solutions";
 import WhatdoWeDo from "@/components/home/WhatdoWeDo";
@@ -71,7 +72,7 @@ const Home = () => {
           <WhatdoWeDo />
         </div>
 
-        <div className="container my-20">
+        <div className="container mt-20">
           <div className=" text-center mb-10">
             <h2 className="text-primary mb-5 font-bold text-5xl">
               Tailor-made solutions for focused industries
@@ -85,8 +86,21 @@ const Home = () => {
           <Solutions />
         </div>
 
-        <div className="container my-20">
-          <WorldMap />
+        <div className="container  my-20">
+          {/* <WorldMap /> */}
+          <img
+            src="/world-map.png"
+            alt=""
+            className="max-w-full"
+          />
+        </div>
+
+        <div className="containevr my-20">
+          <div className=" text-center mb-10">
+            <h2 className="text-primary mb-5 font-bold text-5xl">ATI Life</h2>
+          </div>
+
+          <Life />
         </div>
       </div>
     </div>

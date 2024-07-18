@@ -1,8 +1,5 @@
 import RightIcon from "@/assets/icons/RightIcon";
-import { Avatar, Button, Card, Col, Row } from "antd";
-import { ArrowRight3 } from "iconsax-react";
-
-const { Meta } = Card;
+import { Button, Card, Col, Row } from "antd";
 
 interface Item {
   title: string;

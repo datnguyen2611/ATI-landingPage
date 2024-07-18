@@ -1,9 +1,9 @@
-import React, { useState } from "react";
 import { Page } from "@/types";
-import { Button, Select, Drawer, Menu } from "antd";
-import NavbarItem from "./NavbarItem";
-import { ArrowDown2 } from "iconsax-react";
 import { MenuOutlined } from "@ant-design/icons";
+import { Button, Drawer, Select } from "antd";
+import { ArrowDown2 } from "iconsax-react";
+import { useState } from "react";
+import NavbarItem from "./NavbarItem";
 
 const { Option } = Select;
 

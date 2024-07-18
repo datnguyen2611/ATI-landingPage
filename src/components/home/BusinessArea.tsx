@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { Tabs, Tag } from "antd";
+import { useState } from "react";
 
 const { TabPane } = Tabs;
 
